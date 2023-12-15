@@ -6,7 +6,7 @@ import { useCallback, useMemo } from "react";
 import { formatDistanceToNowStrict } from "date-fns";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 
-const PostItem = ({ data = {}, userId }) => {
+const SearchItem = ({ data = {}, userId }) => {
   const router = useRouter();
 
   const goToUser = useCallback(
@@ -65,16 +65,10 @@ const PostItem = ({ data = {}, userId }) => {
           </div>
 
           <div className='text-black mt-1'>{data.body}</div>
-          <div className='flex flex-row items-center mt-3 gap-10'>
-            <div className='flex flex-row items-center text-neutral-500 gap-2 cursor-pointer transition hover:text-gray-800'>
-              <MessageCircle />
-              <p>{data.comments?.length || 0}</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default PostItem;
+export default SearchItem;

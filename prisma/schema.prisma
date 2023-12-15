@@ -3,11 +3,13 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
 }
 
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
+  
 }
 
 model User {

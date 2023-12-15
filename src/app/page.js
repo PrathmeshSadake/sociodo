@@ -2,9 +2,8 @@ import React from "react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import { db } from "@/db";
-import Form from "@/components/Form";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import PostFeed from "@/components/PostFeed";
+import Timeline from "@/components/Timeline";
 
 const Home = async () => {
   const { getUser } = getKindeServerSession();
@@ -21,8 +20,7 @@ const Home = async () => {
 
   return (
     <MaxWidthWrapper>
-      <Form placeholder="What's happening?" />
-      <PostFeed />
+      <Timeline />
     </MaxWidthWrapper>
   );
 };

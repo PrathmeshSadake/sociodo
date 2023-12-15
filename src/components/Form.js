@@ -43,7 +43,7 @@ const Form = ({ placeholder, isComment, postId }) => {
   }, [body, mutatePosts, isComment, postId, mutatePost]);
 
   return (
-    <div className='px-5 py-2 rounded-lg bg-card my-12'>
+    <div className='px-5 py-2 rounded-lg bg-card mb-6'>
       {user && (
         <div className='flex flex-row gap-4'>
           <div>
