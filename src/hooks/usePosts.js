@@ -3,8 +3,9 @@ import axios from "axios";
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 
-const usePosts = () => {
-  const { data, error, isLoading, mutate } = useSWR("/api/posts", fetcher);
+const usePosts = (userId) => {
+  const url = userId ? `/api/posts?userId=${userId}` : "/api/posts";
+  const { data, error, isLoading, mutate } = useSWR(url, fetcher);
 
   return {
     data,
