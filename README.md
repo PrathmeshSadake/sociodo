@@ -65,6 +65,18 @@ You can copy values of these variables below
 
   visit http://localhost:3000 on your development environment
 ```
+
+** To build and run Dockerized Next.js app, run the following commands in the terminal:**
+
+```bash
+git clone https://github.com/PrathmeshSadake/sociodo.git
+
+cd sociodo
+
+docker-compose up --build
+
+Visit http://localhost:3000 on your development environment
+```
     
 ## Authors
 
