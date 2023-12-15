@@ -12,8 +12,10 @@ datasource db {
 
 model User {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId          String    @unique
+  userId          String   @unique
   email           String
+  image           String?
+  name            String?
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
   posts           Post[]
@@ -28,8 +30,6 @@ model Post {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   userId             String
-  image              String?
-  name                 String?
   user User @relation(fields: [userId], references: [userId], onDelete: Cascade)
 
   comments          Comment[]
